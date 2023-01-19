@@ -19,6 +19,10 @@ public class PersonService {
         return personRepository.findById(id).orElse(new PersonModel());
     }
 
+    public PersonModel findByName(String name) {
+        return personRepository.findByName(name).orElse(new PersonModel());
+    }
+
     public PersonModel update(PersonModel person){
         return personRepository.save(person);
     }

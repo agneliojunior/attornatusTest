@@ -13,27 +13,27 @@ public class PersonController {
     PersonService personService;
 
     @PostMapping("/person")
-    public Person create(@RequestBody PersonModel person){
+    public PersonModel create(@RequestBody PersonModel person){
         return personService.create(person);
     }
 
     @GetMapping("/person/{id}")
-    public Person findById(@PathVariable Long id){
+    public PersonModel findById(@PathVariable Long id){
         return personService.findById(id);
     }
 
     @GetMapping("/person/name/{name}")
-    public Person findByName(@PathVariable String name){
+    public PersonModel findByName(@PathVariable String name){
         return personService.findByName(name);
     }
 
     @PatchMapping("/person")
-    public Person uptade (@RequestBody Person person) {
+    public PersonModel update (@RequestBody PersonModel person) {
         return personService.update(person);
     }
 
     @DeleteMapping("/person")
-    public void delete(@RequestBody Person person) {
+    public void delete(@RequestBody PersonModel person) {
         personService.delete(person);
     }
 

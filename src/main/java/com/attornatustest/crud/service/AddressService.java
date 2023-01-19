@@ -12,15 +12,15 @@ public class AddressService {
     AddressRepository addressRepository;
 
     public AddressModel create(AddressModel address){
-        return AddressRepository.save(address);
+        return addressRepository.save(address);
     }
 
     public AddressModel findById(Long id){
         return addressRepository.findById(id).orElse(new AddressModel());
     }
 
-    public AddressModel findByAdress(String streetAvenue) {
-        return addressRepository.findByName(streetAvenue).orElse(new AddressModel());
+    public AddressModel findByAddress(String streetAvenue) {
+        return addressRepository.findByAddress(streetAvenue).orElse(new AddressModel());
     }
 
     public AddressModel update(AddressModel address){

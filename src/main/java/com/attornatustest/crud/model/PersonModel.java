@@ -15,7 +15,7 @@ public class PersonModel {
 
     private LocalDate birthDate;
 
-    @@OneToOne(cascade =CascadeType.ALL)
+    @OneToOne(cascade =CascadeType.ALL)
     private AddressModel address;
 
     public PersonModel(){

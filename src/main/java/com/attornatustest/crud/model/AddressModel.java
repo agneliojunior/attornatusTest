@@ -20,6 +20,9 @@ public class AddressModel {
 
     private PersonModel person;
 
+    @OneToOne(cascade =CascadeType.ALL)
+    private PersonModel personModel;
+
     public AddressModel(){
 
     }
