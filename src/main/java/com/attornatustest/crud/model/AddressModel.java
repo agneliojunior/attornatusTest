@@ -20,7 +20,7 @@ public class AddressModel {
 
     private PersonModel person;
 
-    @OneToOne(cascade =CascadeType.ALL)
+    @OneToOne(mappedBy = "addressModel")
     private PersonModel personModel;
 
     public AddressModel(){

@@ -15,8 +15,9 @@ public class PersonModel {
 
     private LocalDate birthDate;
 
-    @OneToOne(cascade =CascadeType.ALL)
-    private AddressModel address;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "addressModel_id", referencedColumnName = "id")
+    private AddressModel addressModel;
 
     public PersonModel(){
 
